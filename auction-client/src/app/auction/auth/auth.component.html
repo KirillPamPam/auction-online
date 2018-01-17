@@ -1,0 +1,21 @@
+<div class="auth">
+    <div class="auth_block">
+        <h1 class="auth_block_name-style">{{auctionName}}</h1>
+        <div>
+            <input pInputText type="text"
+                   [placeholder]="usernamePlaceholder"
+                   class="auth_block_input-style">
+        </div>
+        <div>
+            <input pPassword type="password"
+                   [placeholder]="passwordPlaceholder"
+                   class="auth_block_input-style"
+                   [feedback]="false"
+            >
+        </div>
+        <div style="padding-left: 29%">
+            <button pButton type="button" [label]="signIn" class="ui-button-warning"></button>
+            <button pButton type="button" [label]="signUp" class="ui-button-warning"></button>
+        </div>
+    </div>
+</div>

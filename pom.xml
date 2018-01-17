@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.vagrs</groupId>
+        <artifactId>main-parent</artifactId>
+        <relativePath>main-parent/pom.xml</relativePath>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>auction-online</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>main-parent</module>
+        <module>auction-parent</module>
+        <module>auction-service</module>
+        <module>auction-client</module>
+    </modules>
+
+</project>
