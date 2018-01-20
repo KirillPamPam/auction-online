@@ -20,6 +20,7 @@
         <module>auction-parent</module>
         <module>auction-service</module>
         <module>auction-client</module>
+        <module>site</module>
     </modules>
 
 </project>
