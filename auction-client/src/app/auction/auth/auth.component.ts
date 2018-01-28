@@ -5,8 +5,7 @@ import {AuthService} from "./auth.service";
 
 @Component({
     selector: "auth-auction",
-    templateUrl: "auth.component.html",
-    providers: [AuthService]
+    templateUrl: "auth.component.html"
 })
 export class AuthComponent implements OnInit, OnDestroy{
     usernamePlaceholder: string;

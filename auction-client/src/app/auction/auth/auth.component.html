@@ -1,6 +1,7 @@
 <div class="auth">
     <div class="auth_block">
-        <h1 class="auth_block_name-style">{{auctionName}}</h1>
+        <div class="auth_block_name-style">{{auctionName}}</div>
+        <div class="auth_block_tagline">{{tagline}}</div>
         <div>
             <input pInputText type="text"
                    [placeholder]="usernamePlaceholder"
@@ -13,7 +14,7 @@
                    [feedback]="false"
             >
         </div>
-        <div style="padding-left: 29%">
+        <div style="padding-left: 28%">
             <button pButton type="button" [label]="signIn" class="ui-button-warning"></button>
             <button pButton type="button" (click)="onClick()" [label]="signUp" class="ui-button-warning"></button>
         </div>
