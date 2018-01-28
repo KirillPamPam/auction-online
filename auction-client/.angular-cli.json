@@ -21,7 +21,7 @@
         "../node_modules/primeng/resources/themes/cupertino/theme.css",
         "assets/main.less"
       ],
-      "environmentSource": "environment/environment.ts",
+      "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
@@ -30,7 +30,8 @@
   ],
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "defaults": {
