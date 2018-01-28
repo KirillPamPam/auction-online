@@ -9,7 +9,7 @@ import {Providers} from "./providers.index";
 @NgModule({
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule.forRoot(appRoutes, {useHash: true}),
         AuthModule
     ],
     declarations: [

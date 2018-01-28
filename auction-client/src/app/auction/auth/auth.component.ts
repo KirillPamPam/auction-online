@@ -1,9 +1,12 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {LocalizationService} from "../shared/localization.service";
+import {HttpClient} from "@angular/common/http";
+import {AuthService} from "./auth.service";
 
 @Component({
     selector: "auth-auction",
-    templateUrl: "auth.component.html"
+    templateUrl: "auth.component.html",
+    providers: [AuthService]
 })
 export class AuthComponent implements OnInit, OnDestroy{
     usernamePlaceholder: string;
@@ -13,7 +16,8 @@ export class AuthComponent implements OnInit, OnDestroy{
     signIn: string;
     signUp: string;
 
-    constructor(private localizationService: LocalizationService) {
+    constructor(private localizationService: LocalizationService,
+                private authService: AuthService) {
     }
 
     ngOnInit(): void {
@@ -26,5 +30,9 @@ export class AuthComponent implements OnInit, OnDestroy{
     }
 
     ngOnDestroy(): void {
+    }
+
+    onClick() {
+        this.authService.click();
     }
 }
