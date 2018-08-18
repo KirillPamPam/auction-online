@@ -15,6 +15,9 @@ export class AuthComponent implements OnInit, OnDestroy{
     signIn: string;
     signUp: string;
 
+    username: string;
+    password: string;
+
     constructor(private localizationService: LocalizationService,
                 private authService: AuthService) {
     }
@@ -31,7 +34,11 @@ export class AuthComponent implements OnInit, OnDestroy{
     ngOnDestroy(): void {
     }
 
-    onClick() {
-        this.authService.click();
+    onSignIn(): void {
+        let user = {
+            username: this.username,
+            password: this.password
+        };
+        this.authService.login(user);
     }
 }

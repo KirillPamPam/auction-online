@@ -1,13 +1,17 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {ApiService} from "../shared/backend.api";
 
 @Injectable()
 export class AuthService {
-     constructor(private http: HttpClient) {
-     }
+    constructor(private http: HttpClient,
+                private apiService: ApiService) {
+    }
 
-     click() {
-         this.http.get('http://localhost:8080/auction-service-1.0/hello')
-             .subscribe(data => console.log(data));
-     }
+    login(user: any): void {
+        this.http.post(this.apiService.loginUrl, user)
+            .subscribe(next => {
+                console.log(next);
+            });
+    }
 }
